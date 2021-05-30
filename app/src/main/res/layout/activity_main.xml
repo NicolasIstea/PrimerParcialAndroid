@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/ma_titulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:text="Bienvenido a la Heladeria"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.01" />
+
+            <TextView
+                android:id="@+id/ma_Helados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"
+                android:text="Helados:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.044"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ma_rg_cajas" />
+
+            <RadioGroup
+                android:id="@+id/ma_rg_helados"
+                android:layout_width="match_parent"
+                android:layout_height="89dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ma_Helados">
+
+                <RadioButton
+                    android:id="@+id/rb_helado_cono"
+                    android:layout_width="match_parent"
+                    android:layout_height="31dp"
+                    android:checked="true"
+                    android:text="Cono" />
+
+                <RadioButton
+                    android:id="@+id/rb_helado_cuarto"
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
+                    android:text="1/4 Helado" />
+
+                <RadioButton
+                    android:id="@+id/rb_helado_kilo"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:text="1 Kg Helado" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ma_titulo_cajero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Que cajero atiende:"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/ma_rg_cajas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ma_titulo">
+
+                <RadioButton
+                    android:id="@+id/rb_cajero1"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:checked="true"
+                    android:text="Cajero 1" />
+
+                <RadioButton
+                    android:id="@+id/rb_cajero2"
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
+                    android:text="Cajero 2" />
+
+                <RadioButton
+                    android:id="@+id/rb_cajero3"
+                    android:layout_width="match_parent"
+                    android:layout_height="27dp"
+                    android:text="Cajero 3" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ma_quienReparte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Quien Reparte"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.046"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ma_e_gustos" />
+
+            <RadioGroup
+                android:id="@+id/ma_rg_repartidores"
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ma_quienReparte">
+
+                <RadioButton
+                    android:id="@+id/rb_repartidorUno"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:checked="true"
+                    android:text="Repartidor 1" />
+
+                <RadioButton
+                    android:id="@+id/rb_repartidorDos"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:text="Repartidor 2" />
+
+                <RadioButton
+                    android:id="@+id/rb_repartidorTres"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:text="Repartidor 3" />
+
+                <RadioButton
+                    android:id="@+id/rb_repartidorCuatro"
+                    android:layout_width="match_parent"
+                    android:layout_height="31dp"
+                    android:text="Repartidor 4" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/ma_e_gustos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:hint="Escriba los gustos separados por coma"
+                android:inputType="textPersonName"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ma_rg_helados"
+                app:layout_constraintVertical_bias="0.039" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ma_recycleViewCliente"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ma_rg_repartidores">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/ma_comprar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:text="Comprar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.879"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ma_recycleViewCliente" />
+
+                <Button
+                    android:id="@+id/ma_guardarVentasDia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="guardar y cerrar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.099"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ma_recycleViewCliente" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/ma_informeVentas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:text="informe de ventas" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
